@@ -23,7 +23,7 @@ def validate_long_urls(model):
 
 
 class ShortlinkListView(ListAPIView):
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = ShortLink.objects.all()
     serializer_class = ShortLinkListSerializer
 
@@ -34,7 +34,7 @@ class ShortlinkListView(ListAPIView):
 
 
 class ShortlinkCreateView(CreateAPIView):
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = ShortLink.objects.all()
     serializer_class = ShotlinkCreateSerializer
 
